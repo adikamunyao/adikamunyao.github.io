@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adika Munyao</title>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
     <style>
         /* Global Styles */
@@ -13,27 +13,34 @@
             font-family: 'Open Sans', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f9;
-            color: #333;
+            background-color: #f8f9fa;
+            color: #2c3e50;
+            line-height: 1.6;
         }
 
-        h1, h2, h3, p {
+        h1, h2, h3 {
             margin: 0;
-            padding: 0;
+            font-weight: 700;
         }
 
         a {
             text-decoration: none;
-            color: #003366;
+            color: #2980b9;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #1abc9c;
         }
 
         /* Navigation Bar */
         nav {
-            background-color: #003366;
-            padding: 10px 20px;
+            background-color: #2c3e50;
+            padding: 15px 20px;
             position: sticky;
             top: 0;
             z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
 
         nav ul {
@@ -45,122 +52,200 @@
         }
 
         nav ul li {
-            margin: 0 15px;
+            margin: 0 20px;
         }
 
         nav ul li a {
-            color: white;
+            color: #ecf0f1;
             font-size: 16px;
             font-weight: 600;
+            text-transform: uppercase;
         }
 
         nav ul li a:hover {
-            color: #f0f0f0;
+            color: #1abc9c;
         }
 
         /* Header Section */
         header {
-            background-color: #003366;
-            color: white;
+            background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+            color: #ecf0f1;
             text-align: center;
-            padding: 60px 0;
+            padding: 80px 20px;
         }
 
         header h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
+            font-size: 3em;
+            letter-spacing: 2px;
         }
 
         header p {
-            font-size: 1.2em;
+            font-size: 1.3em;
+            margin-top: 10px;
+            opacity: 0.9;
         }
 
         /* Section Styles */
         section {
-            padding: 60px 20px;
+            padding: 80px 20px;
         }
 
         .section-title {
             text-align: center;
-            font-size: 2em;
-            color: #003366;
-            margin-bottom: 40px;
+            font-size: 2.5em;
+            color: #2c3e50;
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .section-title:after {
+            content: '';
+            width: 50px;
+            height: 3px;
+            background-color: #1abc9c;
+            display: block;
+            margin: 10px auto;
         }
 
         /* Skills Section */
         .skills {
             display: flex;
             justify-content: center;
-            gap: 40px;
-            margin-top: 30px;
+            gap: 60px;
+            margin-top: 40px;
         }
 
         .skill {
             text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .skill:hover {
+            transform: translateY(-10px);
         }
 
         .skill i {
-            font-size: 50px;
-            color: #003366;
-            margin-bottom: 10px;
+            font-size: 60px;
+            color: #2980b9;
+            margin-bottom: 15px;
         }
 
         .skill p {
-            font-size: 1.1em;
-            color: #666;
+            font-size: 1.2em;
+            color: #7f8c8d;
+            font-weight: 600;
         }
 
-        /* Project Cards */
+        /* Projects Section */
         .projects {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
             margin-top: 40px;
         }
 
         .project-card {
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
             overflow: hidden;
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .project-card:hover {
-            transform: scale(1.05);
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
         }
 
         .project-card img {
             width: 100%;
-            height: 180px;
+            height: 200px;
             object-fit: cover;
+            border-bottom: 2px solid #1abc9c;
         }
 
         .project-card h3 {
-            padding: 10px;
-            font-size: 1.25em;
+            padding: 15px 20px;
+            font-size: 1.4em;
+            color: #2c3e50;
         }
 
         .project-card p {
-            padding: 0 10px 10px;
-            color: #777;
+            padding: 0 20px 15px;
+            color: #7f8c8d;
             font-size: 1em;
+        }
+
+        .project-card a {
+            display: block;
+            padding: 10px 20px;
+            background-color: #1abc9c;
+            color: #fff;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .project-card a:hover {
+            background-color: #16a085;
+        }
+
+        /* Contact Me Section */
+        #contact {
+            background-color: #ecf0f1;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            border: 1px solid #bdc3c7;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        .contact-form textarea {
+            height: 150px;
+            resize: none;
+        }
+
+        .contact-form button {
+            background-color: #2980b9;
+            color: #fff;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background-color: #1abc9c;
         }
 
         /* Footer */
         footer {
-            background-color: #003366;
-            color: white;
+            background-color: #2c3e50;
+            color: #ecf0f1;
             text-align: center;
-            padding: 20px;
+            padding: 30px;
+            font-size: 1em;
         }
 
         footer a {
-            color: #f0f0f0;
+            color: #1abc9c;
         }
 
         footer a:hover {
-            color: #ffffff;
+            color: #16a085;
         }
     </style>
 </head>
@@ -174,7 +259,7 @@
             <li><a href="#services">Services</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#skills">Skills</a></li>
-            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#contact">Contact Me</a></li>
         </ul>
     </nav>
 
@@ -187,18 +272,18 @@
     <!-- About Me Section -->
     <section id="about">
         <h2 class="section-title">About Me</h2>
-        <p>Hello, I'm Adika Munyao, a Data Scientist with expertise in data analysis, Python programming, and machine learning. I have worked on numerous projects that focus on turning raw data into actionable insights. My passion for data and technology has driven me to continually learn and grow, and I'm eager to work on exciting challenges that make an impact.</p>
+        <p>Hello, I'm Adika Munyao, a Data Scientist with a passion for transforming raw data into actionable insights. With expertise in Python, machine learning, and data visualization, I thrive on solving complex problems and delivering impactful solutions.</p>
     </section>
 
     <!-- Services Section -->
     <section id="services">
         <h2 class="section-title">Services</h2>
-        <p>I offer a range of services to help you with data-driven solutions, including:</p>
+        <p>I provide professional data-driven solutions, including:</p>
         <ul>
-            <li>Data Analysis and Visualization</li>
-            <li>Machine Learning Model Development</li>
-            <li>Data Cleaning and Preprocessing</li>
-            <li>Custom Python Scripts for Automation</li>
+            <li>Data Analysis & Visualization</li>
+            <li>Machine Learning Development</li>
+            <li>Data Cleaning & Preprocessing</li>
+            <li>Custom Python Automation Scripts</li>
         </ul>
     </section>
 
@@ -207,21 +292,21 @@
         <h2 class="section-title">Projects</h2>
         <div class="projects">
             <div class="project-card">
-                <img src="https://via.placeholder.com/400x200" alt="Project Screenshot">
-                <h3>dsc-more-practice-with-matplotlib</h3>
-                <p>A Python project using Matplotlib for visual data analysis.</p>
+                <img src="https://via.placeholder.com/400x200" alt="Matplotlib Project">
+                <h3>Data Visualization with Matplotlib</h3>
+                <p>Explored advanced data visualization techniques using Matplotlib in Python.</p>
                 <a href="https://github.com/adikamunyao/dsc-more-practice-with-matplotlib" target="_blank">View Project</a>
             </div>
             <div class="project-card">
-                <img src="https://via.placeholder.com/400x200" alt="Project Screenshot">
-                <h3>dsc-data-serialization-lab</h3>
-                <p>Data serialization techniques using Python and JSON.</p>
+                <img src="https://via.placeholder.com/400x200" alt="Serialization Project">
+                <h3>Data Serialization Lab</h3>
+                <p>Implemented data serialization using Python and JSON for efficient storage.</p>
                 <a href="https://github.com/adikamunyao/dsc-data-serialization-lab" target="_blank">View Project</a>
             </div>
             <div class="project-card">
-                <img src="https://via.placeholder.com/400x200" alt="Project Screenshot">
-                <h3>dsc-pandas-data-cleaning-lab</h3>
-                <p>Data cleaning and transformation with Pandas in Python.</p>
+                <img src="https://via.placeholder.com/400x200" alt="Pandas Project">
+                <h3>Pandas Data Cleaning</h3>
+                <p>Performed data cleaning and transformation with Pandas for analysis-ready datasets.</p>
                 <a href="https://github.com/adikamunyao/dsc-pandas-data-cleaning-lab" target="_blank">View Project</a>
             </div>
         </div>
@@ -236,25 +321,32 @@
                 <p>Python</p>
             </div>
             <div class="skill">
-                <i class="fab fa-django"></i>
-                <p>Django</p>
+                <i class="fas fa-database"></i>
+                <p>Data Analysis</p>
             </div>
             <div class="skill">
-                <i class="fas fa-chart-line"></i>
-                <p>Data Analysis</p>
+                <i class="fas fa-chart-bar"></i>
+                <p>Data Visualization</p>
             </div>
         </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section id="testimonials">
-        <h2 class="section-title">Testimonials</h2>
-        <p>"Adika is a highly skilled data scientist who helped us unlock valuable insights from our data. His technical expertise and attention to detail are outstanding!" - Client Testimonial</p>
+    <!-- Contact Me Section -->
+    <section id="contact">
+        <h2 class="section-title">Contact Me</h2>
+        <div class="contact-form">
+            <form action="mailto:YOUR_EMAIL_HERE@example.com" method="post" enctype="text/plain">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>Contact me at: <a href="mailto:adikamunyao@example.com">adikamunyao@example.com</a></p>
+        <p>Connect with me: <a href="mailto:YOUR_EMAIL_HERE@example.com">YOUR_EMAIL_HERE@example.com</a></p>
     </footer>
 
 </body>
