@@ -1,51 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Me - Adika Munyao</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f0f0f0;
-      margin: 0;
-      padding: 0;
-    }
-    header {
-      background-color: #333;
-      color: white;
-      text-align: center;
-      padding: 50px 0;
-    }
-    section {
-      padding: 20px;
-      text-align: center;
-    }
-    footer {
-      text-align: center;
-      padding: 10px;
-      background-color: #333;
-      color: white;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adika Munyao - Projects Overview</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        section {
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 1000px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #003366;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+        }
+
+        .project-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: scale(1.05);
+        }
+
+        .project-card img {
+            width: 100%;
+            border-radius: 8px;
+            max-height: 200px;
+            object-fit: cover;
+        }
+
+        .project-card h3 {
+            margin-top: 10px;
+            font-size: 1.25em;
+        }
+
+        .project-card p {
+            font-size: 1em;
+            color: #666;
+            margin: 10px 0;
+        }
+
+        .project-card a {
+            color: #003366;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #003366;
+            color: white;
+        }
+    </style>
 </head>
+
 <body>
 
-  <header>
-    <h1>Welcome to My GitHub Page!</h1>
-    <p>Hi, I'm Adika Munyao!</p>
-  </header>
+    <header>
+        <h1>Welcome to My GitHub Page</h1>
+        <p>Discover My Projects and Visualizations</p>
+    </header>
 
-  <section>
-    <h2>About Me</h2>
-    <p>I'm a [Your Profession or Role] passionate about [Your Interests]. I enjoy working on projects related to [Your Interests].</p>
-    <p>Explore my repositories and feel free to contact me!</p>
-  </section>
+    <section>
+        <h2>Project Overview</h2>
+        <div class="projects">
+            <!-- Project 1 -->
+            <div class="project-card">
+                <img src="https://via.placeholder.com/350x200" alt="Project Screenshot">
+                <h3>dsc-more-practice-with-matplotlib</h3>
+                <p>A Python project using Matplotlib for visual data analysis.</p>
+                <a href="https://github.com/adikamunyao/dsc-more-practice-with-matplotlib" target="_blank">View Project</a>
+            </div>
+            
+            <!-- Project 2 -->
+            <div class="project-card">
+                <img src="https://via.placeholder.com/350x200" alt="Project Screenshot">
+                <h3>dsc-data-serialization-lab</h3>
+                <p>Data serialization techniques using Python and JSON.</p>
+                <a href="https://github.com/adikamunyao/dsc-data-serialization-lab" target="_blank">View Project</a>
+            </div>
+            
+            <!-- Project 3 -->
+            <div class="project-card">
+                <img src="https://via.placeholder.com/350x200" alt="Project Screenshot">
+                <h3>dsc-pandas-data-cleaning-lab</h3>
+                <p>Data cleaning and transformation with Pandas in Python.</p>
+                <a href="https://github.com/adikamunyao/dsc-pandas-data-cleaning-lab" target="_blank">View Project</a>
+            </div>
 
-  <footer>
-    <p>Contact me at: [Your Email or Social Media]</p>
-  </footer>
+            <!-- Project 4 -->
+            <div class="project-card">
+                <img src="https://via.placeholder.com/350x200" alt="Project Screenshot">
+                <h3>dsc-working-with-known-json-schemas-lab</h3>
+                <p>Handling and transforming JSON schemas in Python.</p>
+                <a href="https://github.com/adikamunyao/dsc-working-with-known-json-schemas-lab" target="_blank">View Project</a>
+            </div>
+
+            <!-- Project 5 -->
+            <div class="project-card">
+                <img src="https://via.placeholder.com/350x200" alt="Project Screenshot">
+                <h3>dsc-exploring-and-transforming-json-schemas-lab</h3>
+                <p>Exploring JSON schemas and transformation in Python.</p>
+                <a href="https://github.com/adikamunyao/dsc-exploring-and-transforming-json-schemas-lab" target="_blank">View Project</a>
+            </div>
+
+            <!-- Project 6 -->
+            <div class="project-card">
+                <img src="https://via.placeholder.com/350x200" alt="Project Screenshot">
+                <h3>ds-phase-1-Data-Cleaning</h3>
+                <p>Data cleaning and preprocessing techniques in Python.</p>
+                <a href="https://github.com/adikamunyao/ds-phase-1-Data-Cleaning" target="_blank">View Project</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Contact me at: <a href="mailto:adikamunyao@example.com">adikamunyao@example.com</a></p>
+    </footer>
 
 </body>
-</html>
 
+</html>
